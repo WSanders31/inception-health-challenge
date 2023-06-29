@@ -19,7 +19,7 @@ In terms of AWS services utilized, I stuck to the Serverless basics, IE: **API G
 
 A new directory called **infrastructure** exists where all infrastructure related things exist.
 
-I've split up infrastructure into two categories, mutable and immutable. This is simply to allow the deletion of infrastructure that doesn't need to be worried about loss of state. (IE. API Gateway/Lambda/EventBridge Rules vs. DynamoDB)
+I've split up infrastructure into two categories, app and database. This is to layer the infrastructure and allow for finer tuned control over infrastructure, such as the deletion of infrastructure that doesn't need to be worried about loss of state. (IE. API Gateway/Lambda/EventBridge Rules vs. DynamoDB)
 
 I exposed two endpoints on the **API Gateway**. 
 - **GET /checkins** for fetching checkins via the backend function. 

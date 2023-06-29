@@ -1,11 +1,15 @@
-import { App } from 'aws-cdk-lib';
-import { InceptionHealthMutable } from './mutable';
-import { InceptionHealthImmutable } from './immutable';
+import { App } from "aws-cdk-lib";
+import { InceptionHealthApp } from "./app";
+import { InceptionHealthDatabase } from "./database";
 
-const app = new App()
+const app = new App();
 
-// Creates both mutable and immutable stacks.
-new InceptionHealthImmutable(app, "InceptionHealthImmutable");
-new InceptionHealthMutable(app, "InceptionHealthMutable");
+/**
+ * Creates both app and database stacks.
+ * 
+ * Layered architecture, separating them for finer control.
+ */
+new InceptionHealthDatabase(app, "InceptionHealthDatabase");
+new InceptionHealthApp(app, "InceptionHealthApp");
 
 app.synth();

@@ -6,14 +6,23 @@
   "scripts": {
     "build": "esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
     "build-express": "esbuild index.ts express.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "init": "export AWS_REGION=us-east-1 && cd infrastructure && npx aws-cdk bootstrap && npx aws-cdk deploy --all",
+    "deploy": "export AWS_REGION=us-east-1 && cd infrastructure && npx aws-cdk deploy --all",
+    "destroy": "export AWS_REGION=us-east-1 && cd infrastructure && npx aws-cdk destroy --all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.85.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.85.0-alpha.0",
+    "@tsconfig/node18": "^18.2.0",
     "@types/aws-lambda": "^8.10.102",
-    "esbuild": "^0.14.54"
+    "@types/node": "^20.3.2",
+    "aws-cdk-lib": "^2.85.0",
+    "esbuild": "^0.14.54",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.165.0",

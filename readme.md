@@ -35,5 +35,6 @@ Finally, there's a ***DynamoDB*** table with a **Partition Key** of *"id"* - wit
 For `IAM Role Policies` I follow the pattern of least privilege for each service.
 
 ### **Architecture**
-- <img width="395" alt="image" src="https://github.com/WSanders31/inception-health-challenge/assets/3769409/08e35c3b-197c-4b41-aa8a-c3aa5bbd144a">
+<img width="416" alt="image" src="https://github.com/WSanders31/inception-health-challenge/assets/3769409/7e03aa2e-79d4-4b72-aead-4f41921113bd">
+
 

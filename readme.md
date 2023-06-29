@@ -1,6 +1,5 @@
 # Inception Health Platform Challenge
 ## Submission by: Will Sanders
-<br>
 
 ### **Getting Started**
 
@@ -17,7 +16,7 @@ I decided to utilize [aws-cdk](https://github.com/aws/aws-cdk) as the *infrastru
 
 In terms of AWS services utilized, I stuck to the Serverless basics, IE: **API Gateway(v2)**, **Lambda**, and obviously, **DynamoDB**.
 
-A new directory called **infrastructure** exists where all infrastructure related things exist.
+A new directory called **infrastructure** was added in `/app` where all infrastructure related things exist.
 
 I've split up infrastructure into two categories, app and database. This is to layer the infrastructure and allow for finer tuned control over infrastructure, such as the deletion of infrastructure that doesn't need to be worried about loss of state. (IE. API Gateway/Lambda/EventBridge Rules vs. DynamoDB)
 
@@ -34,4 +33,8 @@ For the `automation of Check-ins`, I took advantage of an **Event Bridge Rule** 
 Finally, there's a ***DynamoDB*** table with a **Partition Key** of *"id"* - with a BillingMode of ***OnDemand*** pricing.
 
 For `IAM Role Policies` I follow the pattern of least privilege for each service.
+
+### **Architecture**
+<img width="416" alt="image" src="https://github.com/WSanders31/inception-health-challenge/assets/3769409/7e03aa2e-79d4-4b72-aead-4f41921113bd">
+
 

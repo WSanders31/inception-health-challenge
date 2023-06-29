@@ -29,6 +29,9 @@ A **Lambda** function for each:
 - ***app/index.ts --> backend***
 - ***app/index.ts --> checkin***
 
+- <img width="395" alt="image" src="https://github.com/WSanders31/inception-health-challenge/assets/3769409/08e35c3b-197c-4b41-aa8a-c3aa5bbd144a">
+
+
 For the `automation of Check-ins`, I took advantage of an **Event Bridge Rule** to invoke the **CheckIn Lambda** every hour.
 
 Finally, there's a ***DynamoDB*** table with a **Partition Key** of *"id"* - with a BillingMode of ***OnDemand*** pricing.

@@ -16,7 +16,7 @@ I decided to utilize [aws-cdk](https://github.com/aws/aws-cdk) as the *infrastru
 
 In terms of AWS services utilized, I stuck to the Serverless basics, IE: **API Gateway(v2)**, **Lambda**, and obviously, **DynamoDB**.
 
-A new directory called **infrastructure** exists where all infrastructure related things exist.
+A new directory called **infrastructure** was added in `/app` where all infrastructure related things exist.
 
 I've split up infrastructure into two categories, mutable and immutable. This is simply to allow the deletion of infrastructure that doesn't need to be worried about loss of state. (IE. API Gateway/Lambda/EventBridge Rules vs. DynamoDB)
 

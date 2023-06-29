@@ -1,6 +1,5 @@
 # Inception Health Platform Challenge
 ## Submission by: Will Sanders
-<br>
 
 ### **Getting Started**
 
